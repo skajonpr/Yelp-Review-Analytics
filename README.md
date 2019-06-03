@@ -40,7 +40,26 @@ Unsurprisingly, cold drinks were ordered mostly in summer, and hot drinks were o
 
 ### Geographic Mapping
 
-As latitudes and longitudes of each cafe/coffee shop were scraped. We can generate geographical visualizaiton to see how cafes/coffee shops with their ratings distribute across Manhattan. Folium library was used to generate a map as shown below.
+As latitudes and longitudes of each cafe/coffee shop were scraped, we can generate geographical visualizaiton to see how cafes/coffee shops with their ratings distribute across Manhattan. Folium library was used to generate a map as shown below.
 
 <img width="484" alt="Folium Graphical Visualization" src="https://user-images.githubusercontent.com/45326221/58775113-363a1e80-85ee-11e9-8619-0efdef06f3fe.PNG">
+
+## Topic Classification
+
+Since classification is supervised learning, a training dataset is needed. I used an external dataset with labels that was obtained from an online source to train and test models. The labels/topics in the dataset have 5 features consisting of food, service, price, anecdotes/miscellaneous and ambience as shown in the sample set below. The dataset was split into 70:30. 70 percent was used to train, and 30 percent was used to test.
+
+Below is an example of external dataset from an online source[(link)](http://metashare.ilsp.gr:8080/login/?next=/repository/download/479d18c0625011e38685842b2b6a04d72cb57ba6c07743b9879d1a04e72185b8/). 
+
+<img width="527" alt="training dataset" src="https://user-images.githubusercontent.com/45326221/58783448-1fee8b80-860b-11e9-9871-3a0ee2869539.PNG">
+
+In my models, I utilized one-vs-rest strategy to implement Multi Label classification. I've conducted evaluation on 3 models including Naive Bayes, Support vector machine, and K-nearest neighbor.
+
+### Multinomial Naïve Bayes (NB) Model
+
+For the Naïve Bayes, several parameters were tuned to get the best performance from the model. I’ve tried using stopwords and without using stopwords and also several numbers of min_df in the tf-idf vectorization process. Also, different alpha values (Laplace smoothing value) were tuned in the Naïve Bayes model. The performance was reported as shown below.
+
+<img width="478" alt="Naive bayes Report" src="https://user-images.githubusercontent.com/45326221/58783838-22051a00-860c-11e9-9031-be8435d1c89c.PNG">
+
+
+
 
