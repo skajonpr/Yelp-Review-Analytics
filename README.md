@@ -54,12 +54,21 @@ Below is an example of external dataset from an online source[(link)](http://met
 
 In my models, I utilized one-vs-rest strategy to implement Multi Label classification. I've conducted evaluation on 3 models including Naive Bayes, Support vector machine, and K-nearest neighbor.
 
-### Multinomial Naïve Bayes (NB) Model
+### Multinomial Naïve Bayes(NB) Model
 
 For the Naïve Bayes, several parameters were tuned to get the best performance from the model. I’ve tried using stopwords and without using stopwords and also several numbers of min_df in the tf-idf vectorization process. Also, different alpha values (Laplace smoothing value) were tuned in the Naïve Bayes model. The performance was reported as shown below.
 
 <img width="478" alt="Naive bayes Report" src="https://user-images.githubusercontent.com/45326221/58783838-22051a00-860c-11e9-9031-be8435d1c89c.PNG">
 
+### Support Vector Machine(SVM) Model
 
+In the support vector machine model, linear kernel was used. After trying several numbers of C values, the performance of the model is reported as shown below. Support vector machine produced the best performance of 76% compared to the other two models that were evaluated.
 
+<img width="541" alt="SVM report" src="https://user-images.githubusercontent.com/45326221/58796319-2e4aa080-8627-11e9-8143-83c8ca4d7781.PNG">
+
+### K-Nearest Neighbor(KNN) Model
+
+In K-nearest neighbour model, several numbers of K values were tuned. The performance of KNN is reported as shown below.
+
+<img width="472" alt="KNN report" src="https://user-images.githubusercontent.com/45326221/58810271-d1131700-8647-11e9-9134-0d552dcb39d2.PNG">
 
