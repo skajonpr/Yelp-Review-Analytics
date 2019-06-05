@@ -72,3 +72,18 @@ In K-nearest neighbour model, several numbers of K values were tuned. The perfor
 
 <img width="472" alt="KNN report" src="https://user-images.githubusercontent.com/45326221/58810271-d1131700-8647-11e9-9134-0d552dcb39d2.PNG">
 
+## Sentiment Analysis Using VADER
+
+Vader analyzes a piece of text to see if any of the words in the text is present in its lexicon. Each word is assigned a numeric value based on its positive or negative sentiment. In valence-based approach, the intensity of the word is also taken into consideration along with the positive/ negative sentiment. For instance, good, better and best will have a positive numeric value in increasing order.
+
+The final metric, the compound score, is then calculated from the positive, negative and neutral scores. The lexicon ratings for all words have been standardized in such a way that the compound score lies between -1 and 1. In my program, it was set that a compound score in a range of -1 to -0.5 would be categorized as negative, -0.5 to 0.5 would be categorized as neutral, and 0.5 to 1 would be categorized as positive.
+
+The pie chart below shows the output of sentiment analytics performed by VADER on the entire dataset of Yelp reviews for all cafes/coffee shops in Manhattan.
+
+<img width="396" alt="Vader sentiment analysis on yelp reviews" src="https://user-images.githubusercontent.com/45326221/58844713-a904d180-86a2-11e9-842c-58e340d334d0.PNG">
+
+# Application
+
+**Alice’s Tea Cup: Overall rating 3.5**
+
+Applying topic classification model(SVM) that has been trained and Vader models to customer reviews of Alice’s Tea Cup. Sentiment Analysis shows that the sentiment was distributed as follows: positive (89%), negative (5%) and neutral (6%). Further analysis of the positive reviews shows that while customers are happy with the taste of food/coffee, there is scope to increase the service and ambience. Analysis of negative reviews show that customers complained a lot about service and then about the food/coffee. So, we can conclude that Alice’s Tea Cup should first focus on improving their service, then some improvements on food/coffee to increase customer satisfaction and eventually their rating on Yelp.
